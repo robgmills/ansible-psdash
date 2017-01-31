@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Rob Mills
+  description: Installs and configures psdash
+  company: RGM
+  license: MIT
+  min_ansible_version: 2.0
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  galaxy_tags:
+    - server
+dependencies: []

@@ -1,0 +1,7 @@
+---
+- name: Ensure requisite yum packages are installed.
+  yum: name={{ item }} state=present
+  with_items:
+    - "@^Development tools"
+    - python-devel
+    - python-pip

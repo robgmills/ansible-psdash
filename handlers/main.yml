@@ -1,0 +1,12 @@
+---
+- name: start psdash
+  service: name=psdash state=started
+
+- name: stop psdash
+  service: name=psdash state=stopped
+
+- name: restart psdash
+  service: name=psdash state=restarted
+
+- name: reload psdash
+  service: name=minidlna state=reloaded

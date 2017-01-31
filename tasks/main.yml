@@ -1,0 +1,20 @@
+---
+# Setup/install tasks.
+- include: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
+
+# Setup/install tasks.
+- include: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: install psdash via pip
+  pip: name=psdash
+
+- name: Add psdash systemd config
+  template:
+    src: psdash.service.j2
+    dest: /etc/systemd/system/psdash.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: start psdash
