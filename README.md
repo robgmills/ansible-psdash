@@ -8,8 +8,7 @@ This role installs and configures the latest version of [psdash](https://github.
 
 ## Requirements (on host that executes the role)
 
-* virtualenv
-* pip
+None.
 
 ## Role Variables
 
