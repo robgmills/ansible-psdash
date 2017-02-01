@@ -14,7 +14,16 @@ This role installs and configures the latest version of [psdash](https://github.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-None.
+    psdash_port: 5000
+
+The port that psdash should listen on.
+
+    psdash_config: ""
+
+The configuration values for psdash.  It supports all [configuration options available to psdash](https://github.com/Jahaja/psdash#configuration).  For example, to change the URL prefix that psdash responds at to `/psdash` use the following config:
+
+    psdash_config: |
+      PSDASH_URL_PREFIX='/psdash'
 
 ## Dependencies
 

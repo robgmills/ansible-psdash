@@ -2,13 +2,14 @@
 Description=YIFY UI
 
 [Service]
-ExecStart=/usr/local/bin/psdash
+ExecStart=/usr/local/bin/psdash -p {{ psdash_port }}
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=psdash
 User=root
 Group=root
+Environment="PSDASH_CONFIG=/etc/systemd/system/psdash.cfg.py"
 
 [Install]
 WantedBy=multi-user.target%

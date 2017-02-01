@@ -18,3 +18,12 @@
     group: root
     mode: 0644
   notify: start psdash
+
+- name: Add psdash config
+  template:
+    src: psdash.cfg.py.j2
+    dest: /etc/systemd/system/psdash.cfg.py
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart psdash
