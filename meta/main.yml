@@ -11,4 +11,7 @@ galaxy_info:
     - all
   galaxy_tags:
     - server
+    - monitoring
+    - networking
+    - web
 dependencies: []
