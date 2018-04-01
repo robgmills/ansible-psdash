@@ -1,8 +1,12 @@
 [Unit]
-Description=YIFY UI
+Description=psdash in web mode
 
 [Service]
+{% if ('agent' == psdash_mode) and (psdash_master is defined) %}
+ExecStart=/usr/local/bin/psdash -a --register-to {{ psdash_master }}
+{% else %}{# `psdash_mode` should equal 'web' #}
 ExecStart=/usr/local/bin/psdash -p {{ psdash_port }}
+{% endif %}
 Restart=always
 StandardOutput=syslog
 StandardError=syslog

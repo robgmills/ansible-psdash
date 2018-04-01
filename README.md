@@ -18,6 +18,14 @@ Available variables are listed below, along with default values (see `defaults/m
 
 The port that psdash should listen on.
 
+    psdash_mode: web
+
+The operating mode for psdash.  Should be one of `web` or `agent`.  If `agent`, you must specify a `psdash_master` variable.
+
+    psdash_master: undefined
+
+The URL for the psdash node running in `web` mode - i.e. `http://10.0.0.1:5000`
+
     psdash_config: ""
 
 The configuration values for psdash.  It supports all [configuration options available to psdash](https://github.com/Jahaja/psdash#configuration).  For example, to change the URL prefix that psdash responds at to `/psdash` use the following config:

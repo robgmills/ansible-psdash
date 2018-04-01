@@ -2,3 +2,4 @@
 # Default variable values
 psdash_port: 5000
 psdash_config: ""
+psdash_mode: web
